@@ -20,7 +20,7 @@ public class Vehicle {
     @Column(name = "color")
     private String color;
     @OneToOne(targetEntity = Customer.class,cascade = CascadeType.ALL)
-    @JoinColumn(name = "c_Id",referencedColumnName = "c_Id",insertable = false,updatable = false)
+    @JoinColumn(name = "c_id",referencedColumnName = "c_id",insertable = false,updatable = false)
     private Customer customer;
 
 }
