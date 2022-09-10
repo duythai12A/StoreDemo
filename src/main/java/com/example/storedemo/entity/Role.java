@@ -14,7 +14,7 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @Entity
 @Data
-@Table(name = "role")
+@Table(name = "account_customer")
 public class Role {
     @Id
     @Column(name = "account_id")

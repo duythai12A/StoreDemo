@@ -12,19 +12,19 @@ import java.util.List;
 @NoArgsConstructor
 @Entity
 @Data
-@Table(name = "order")
+@Table(name = "order_product")
 public class Order {
     @Id
     @Column(name = "o_id")
     private int oId;
-    @Column(name = "time")
+    @Column(name = "time_order")
     private Instant time;
 
     @OneToMany(targetEntity = Product.class,cascade = CascadeType.ALL)
-    @JoinColumn(name = "pId",referencedColumnName = "pId",insertable = false,updatable = false)
+    @JoinColumn(name = "p_Id",referencedColumnName = "p_Id",insertable = false,updatable = false)
     private List<Product> products;
 
     @OneToOne(targetEntity = Customer.class,cascade = CascadeType.ALL)
-    @JoinColumn(name = "cId",referencedColumnName = "cId",insertable = false,updatable = false)
+    @JoinColumn(name = "c_Id",referencedColumnName = "c_Id",insertable = false,updatable = false)
     private Customer customer;
 }
